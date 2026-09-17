@@ -76,7 +76,7 @@
     <div class="top"><div class="x">×</div><div><h1>Тебе эмоция</h1><small>celamur.com</small></div><div class="spacer"></div><div>↗</div><div class="dots">⋮</div></div>
     <div class="center">
       <div class="title">Эта эмоция закрыта словом</div>
-      <div class="script">место, где мы встретились в первый раз</div>
+      <div class="script">дата, когда мы начали встречаться</div>
       <input id="word" class="input" placeholder="слово" autocomplete="off">
       <button class="btn" onclick="checkWord()">Открыть</button>
       <div id="error" class="error"></div>
@@ -98,12 +98,12 @@
     <div class="top"><div class="x">×</div><div><h1>Тебе эмоция</h1><small>celamur.com</small></div><div class="spacer"></div><div>↗</div><div class="dots">⋮</div></div>
     <div class="center">
       <article class="letter">
-        <h2>С днём рождения, Алёна!</h2>
+        <h2>Встреча с тобой, Зайка!</h2>
         <p>Я весь день мучался, специально думал, что написать тебе.</p>
         <p>Знаю, что подарок может быть простым. Значит, пусть это будет что-то немного другое.</p>
         <p>Просто хочу сказать тебе спасибо за все моменты, улыбки и воспоминания, которые у нас есть.</p>
         <p>Пусть этот день принесёт тебе много радости, тепла и людей, рядом с которыми тебе хорошо.</p>
-        <p>С днём рождения! 💗</p>
+        <p>Яратам сине нык итеп! 💗</p>
       </article>
       <button class="btn" style="margin-top:14px" onclick="show('s4')">Дальше</button>
     </div>
@@ -114,10 +114,10 @@
     <div class="center">
       <div class="title" style="font-size:21px">Что будем делать?</div>
       <div class="choices">
-        <button class="choice" onclick="choose(this)">🌃 Уедем из города на день<span>куда скажешь, без плана</span></button>
-        <button class="choice" onclick="choose(this)">🍿 Ужин, где ты давно хотела<span>я всё организую</span></button>
-        <button class="choice" onclick="choose(this)">🎁 День по твоему сценарию<span>сегодня решаешь только ты</span></button>
-        <button class="choice" onclick="choose(this)">🌅 Никуда не пойдём<span>просто останемся вместе</span></button>
+        <button class="choice" onclick="choose(this)">🌃 Пойдем<span>куда скажешь, без плана</span></button>
+        <button class="choice" onclick="choose(this)">🍿 Кино, где мы хотели<span>пойти вместе</span></button>
+        <button class="choice" onclick="choose(this)">🎁 День по твоему сценарию<span>решаешь только ты</span></button>
+        <button class="choice" onclick="choose(this)">🌅 Никуда не пойдём<span>просто останемся вместе(сикас)</span></button>
       </div>
     </div>
   </section>
@@ -149,8 +149,8 @@
       <div class="photo-wrap"><img src="photo.jpg" alt="Фото"></div>
       <div class="event">
         <strong>Собираюсь</strong>
-        <p>🌃 Уедем из города на день</p>
-        <p id="finalDateTime">сб, 19 сентября · 16:30</p>
+        <p>🌃 Кино, где мы хотели пойти вместе</p>
+        <p id="finalDateTime">сб, 10 октября · 21:00</p>
         <p>куда скажешь, без плана</p>
       </div>
       <button class="btn share" onclick="sharePage()">Поделиться</button>
@@ -160,7 +160,7 @@
 </div>
 
 <script>
-const SECRET = "алёна"; // ← поменяй на нужное слово
+const SECRET = "140826"; // ← поменяй на нужное слово
 
 function show(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
@@ -187,14 +187,14 @@ function choose(btn){
 }
 
 const dateOptions = [
-  {value:'2026-09-18', text:'18 сентября', day:'пт'},
-  {value:'2026-09-19', text:'19 сентября', day:'сб'},
-  {value:'2026-09-20', text:'20 сентября', day:'вс'},
-  {value:'2026-09-21', text:'21 сентября', day:'пн'}
+  {value:'2026-10-09', text:'9 октября', day:'пт'},
+  {value:'2026-10-10', text:'10 октября', day:'сб'},
+  {value:'2026-10-11', text:'11 октября', day:'вс'},
+  {value:'2026-10-12', text:'12 октября', day:'пн'}
 ];
-const timeOptions = ['15:00','15:30','16:00','16:30','17:00'];
-let selectedDate = '2026-09-19';
-let selectedTime = '16:30';
+const timeOptions = ['20:00','21:00','22:00','23:00','00:00'];
+let selectedDate = '2026-10-10';
+let selectedTime = '21:00';
 
 function renderPicker(id, options, selected, onSelect){
   const box=document.getElementById(id);
